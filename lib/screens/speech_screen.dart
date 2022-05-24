@@ -1,5 +1,8 @@
+import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
+import 'package:highlight_text/highlight_text.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
+import 'package:speechtotext_app/screens/highlights.dart';
 
 class SpeechScreen extends StatefulWidget {
   const SpeechScreen({Key? key}) : super(key: key);
@@ -22,6 +25,36 @@ class _SpeechScreenState extends State<SpeechScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+          title: Text(
+              'Confidence : ${(_confidence * 100.0).toStringAsFixed(1)}%')),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: AvatarGlow(
+        animate: _isListening,
+        glowColor: Theme.of(context).primaryColor,
+        endRadius: 75,
+        duration: const Duration(milliseconds: 2000),
+        repeatPauseDuration: const Duration(milliseconds: 100),
+        repeat: true,
+        child: FloatingActionButton(
+          onPressed: () {},
+          child: Icon(_isListening ? Icons.mic : Icons.mic_none),
+        ),
+      ),
+      body: SingleChildScrollView(
+          reverse: true,
+          child: Container(
+            padding: const EdgeInsets.fromLTRB(30, 30, 30, 150),
+            child: TextHighlight(
+              text: _text,
+              words: highlights,
+              textStyle: const TextStyle(
+                  fontSize: 32,
+                  color: Colors.black,
+                  fontWeight: FontWeight.w400),
+            ),
+          )),
+    );
   }
 }
