@@ -29,10 +29,6 @@
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UISupportedInterfaceOrientations</key>
-	<key>NSSpeechRecognitionUsageDescription</key>
-	<string>Needed for Speech Recognition</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>Needed for Microphone Access</string>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
@@ -49,6 +45,9 @@
 	<false/>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
-	
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Needed for Speech Recognition</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Needed for Microphone Access</string>
 </dict>
 </plist>
