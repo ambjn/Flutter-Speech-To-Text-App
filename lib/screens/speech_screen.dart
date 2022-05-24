@@ -27,6 +27,7 @@ class _SpeechScreenState extends State<SpeechScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+          elevation: 0,
           title: Text(
               'Confidence : ${(_confidence * 100.0).toStringAsFixed(1)}%')),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
@@ -38,7 +39,7 @@ class _SpeechScreenState extends State<SpeechScreen> {
         repeatPauseDuration: const Duration(milliseconds: 100),
         repeat: true,
         child: FloatingActionButton(
-          onPressed: () {},
+          onPressed: _listen,
           child: Icon(_isListening ? Icons.mic : Icons.mic_none),
         ),
       ),
@@ -56,5 +57,31 @@ class _SpeechScreenState extends State<SpeechScreen> {
             ),
           )),
     );
+  }
+
+  void _listen() async {
+    if (!_isListening) {
+      bool available = await _speech.initialize(
+          onError: (val) => print('onError: $val'),
+          onStatus: (val) => print('onStatus: $val'));
+      if (available) {
+        setState(() {
+          _isListening = true;
+        });
+        _speech.listen(
+          onResult: (val) => setState(() {
+            _text = val.recognizedWords;
+            if (val.hasConfidenceRating && val.confidence > 0) {
+              _confidence = val.confidence;
+            }
+          }),
+        );
+      }
+    } else {
+      setState(() {
+        _isListening = false;
+        _speech.stop();
+      });
+    }
   }
 }
