@@ -11,9 +11,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Speech To Text App',
-      theme: ThemeData(
-        primarySwatch: Colors.red,
-      ),
       home: SpeechScreen(),
     );
   }

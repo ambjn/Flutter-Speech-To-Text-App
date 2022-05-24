@@ -9,6 +9,11 @@
         <uses-permission android:name="android.permission.BLUETOOTH"/>
         <useas-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
         <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+        <queries>
+            <intent>
+                <action android:name="android.speech.RecognitionService" />
+            </intent>
+        </queries>
         <activity
             android:name=".MainActivity"
             android:exported="true"
