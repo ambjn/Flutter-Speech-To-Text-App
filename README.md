@@ -2,12 +2,9 @@
 
 ## About:
 
-Speech To Text App made using Flutter <br>
+Speech To Text App made using Flutter
 App displays the <i> confidence level </i> & also displays <br>
 the <i> highlighted words </i> and further convertes speech into text.
-
-Speech To Text App made using Flutter
-App displays the <i> confidence level </i> while the user speaks which further is converted into text.
 
 ## Packages:
 
