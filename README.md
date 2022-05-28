@@ -3,7 +3,7 @@
 ## About:
 
 Speech To Text App made using Flutter 
-App displays the <i> confidence level </l> while the user speaks which further is converted into text.
+App displays the <i> confidence level </i> while the user speaks which further is converted into text.
 
 ## Packages:
 
