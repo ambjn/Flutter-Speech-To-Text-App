@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:highlight_text/highlight_text.dart';
 
+// the words we want to see highlighted
 Map<String, HighlightedWord> highlights = {
   'hello': HighlightedWord(
       onTap: () {},
