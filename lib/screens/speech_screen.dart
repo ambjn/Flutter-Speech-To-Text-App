@@ -34,7 +34,7 @@ class _SpeechScreenState extends State<SpeechScreen> {
           title: Padding(
             padding: const EdgeInsets.only(top: 25.0),
             child: Text(
-              'Confidence : ${(_confidence * 100.0).toStringAsFixed(1)}%',
+              'Confidence : ${(_confidence * 100.0).toStringAsFixed(1)}%', // since we want only till one decimal place
               style: const TextStyle(
                   color: Colors.black, fontWeight: FontWeight.w600),
             ),
@@ -85,6 +85,7 @@ class _SpeechScreenState extends State<SpeechScreen> {
         _speech.listen(
           onResult: (val) => setState(() {
             _text = val.recognizedWords;
+            // for confidence rating
             if (val.hasConfidenceRating && val.confidence > 0) {
               _confidence = val.confidence;
             }
