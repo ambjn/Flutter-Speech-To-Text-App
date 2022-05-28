@@ -1,16 +1,26 @@
-# speechtotext_app
+# Speech To Text App
 
-A new Flutter project.
+## About:
 
-## Getting Started
+Speech To Text App made using Flutter <br>
+App displays the <i> confidence level </l> while the user <br> speaks which further is converted into text.
 
-This project is a starting point for a Flutter application.
+## Packages:
 
-A few resources to get you started if this is your first Flutter project:
+<ul>
+<li> speech_to_text: ^5.5.0</li>
+<li> highlight_text: ^1.3.0</li>
+<li> avatar_glow: ^2.0.2</li>
+</ul>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Installation:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+In the command terminal, run the following commands:
+
+    $ git clone https://github.com/ambjn/Flutter-Speech-To-Text-App.git
+    $ cd Flutter-Speech-To-Text-App
+    $ flutter run
+
+## Screenshots:
+
+<center> <img src = screenshot/1.png alt='screenshot-of-app'> </center>

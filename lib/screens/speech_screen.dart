@@ -14,7 +14,7 @@ class SpeechScreen extends StatefulWidget {
 class _SpeechScreenState extends State<SpeechScreen> {
   late stt.SpeechToText _speech;
   bool _isListening = false;
-  String _text = 'press the button & start speaking 🗣️';
+  String _text = 'press the button \n& start speaking 🗣️';
   double _confidence = 1.0;
 
   @override
@@ -28,7 +28,7 @@ class _SpeechScreenState extends State<SpeechScreen> {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 251, 248, 214),
       appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 251, 248, 214),
+          backgroundColor: const Color.fromARGB(255, 251, 248, 214),
           elevation: 0,
           centerTitle: true,
           title: Padding(
@@ -57,13 +57,15 @@ class _SpeechScreenState extends State<SpeechScreen> {
           reverse: true,
           child: Container(
             padding: const EdgeInsets.fromLTRB(30, 60, 30, 150),
-            child: TextHighlight(
-              text: _text,
-              words: highlights,
-              textStyle: const TextStyle(
-                  fontSize: 20,
-                  color: Colors.black,
-                  fontWeight: FontWeight.w400),
+            child: Center(
+              child: TextHighlight(
+                text: _text,
+                words: highlights,
+                textStyle: const TextStyle(
+                    fontSize: 32,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w400),
+              ),
             ),
           )),
     );

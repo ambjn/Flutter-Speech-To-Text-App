@@ -5,19 +5,19 @@ Map<String, HighlightedWord> highlights = {
   'hello': HighlightedWord(
       onTap: () {},
       textStyle: const TextStyle(
-          color: Colors.orange, fontWeight: FontWeight.w400, fontSize: 20)),
+          color: Colors.orange, fontWeight: FontWeight.w400, fontSize: 32)),
   'flutter': HighlightedWord(
       onTap: () {},
       textStyle: const TextStyle(
-          color: Colors.blue, fontWeight: FontWeight.w400, fontSize: 20)),
+          color: Colors.blue, fontWeight: FontWeight.w400, fontSize: 32)),
   'amber': HighlightedWord(
       onTap: () {},
       textStyle: const TextStyle(
           color: Colors.amberAccent,
           fontWeight: FontWeight.w400,
-          fontSize: 20)),
+          fontSize: 32)),
   'developer': HighlightedWord(
       onTap: () {},
       textStyle: const TextStyle(
-          color: Colors.green, fontWeight: FontWeight.w400, fontSize: 12)),
+          color: Colors.green, fontWeight: FontWeight.w400, fontSize: 32)),
 };

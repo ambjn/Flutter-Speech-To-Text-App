@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.light(),
       debugShowCheckedModeBanner: false,
       title: 'Speech To Text App',
-      home: SpeechScreen(),
+      home: const SpeechScreen(),
     );
   }
 }
