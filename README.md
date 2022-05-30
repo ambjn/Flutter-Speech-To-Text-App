@@ -4,7 +4,7 @@
 
 Speech To Text App made using Flutter
 displays the <b> confidence level </b> & also displays
-the <b> highlighted words </b> and further convertes speech into text.
+the <b> highlighted words </b> and further converts speech into text.
 
 ## Packages:
 
